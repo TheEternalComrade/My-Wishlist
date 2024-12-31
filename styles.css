@@ -125,6 +125,12 @@ body{
 }
 
 /*Scroll animation stuff*/
+.wish{
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(0.5);
+    transition: all 1s;
+}
 
 .hidden {
     opacity: 0;
