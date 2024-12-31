@@ -1,0 +1,144 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-family:"Edu AU VIC WA NT Hand", serif;
+    color: green;
+    background-color: black;
+}
+
+#intro div {
+    display: flex;
+    justify-content: center;
+}
+
+#hook{
+    height: 100vh;
+}
+
+
+
+#background-info{
+    height: 100vh;
+}
+
+#bridge{
+    color: green;
+}
+
+.img-fit{
+    width: 100%;
+    height: auto;
+}
+
+#wish-container{
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 33fr 33fr 33fr;
+    gap: 20px;
+}
+
+#wish-container a{
+    text-decoration: none;
+    color: rgb(3, 36, 3);
+    font-weight: 900;
+}
+
+#wish-container a:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#wish-container div{
+    padding: 20px;
+    background-color: lightgreen;
+    border-radius: 15px;
+}
+
+#wish-container a{
+    display: block;
+}
+
+#wish-container .no-anchor{
+    text-decoration: none;
+    color: rgb(3, 36, 3);
+    font-weight: 900;
+}
+
+#wish-container .no-anchor:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#footer{
+    font-size: 2rem;
+    color: lightgreen
+}
+
+/*Tablet media query*/
+@media only screen and (min-width:481px) and (max-width: 768px){
+    #intro{
+        font-size: 1rem;
+        color: green;
+    }
+
+    #wish-container{
+        display: grid;
+        grid-template-columns: 50fr 50fr;
+        gap: 20px;
+    }
+
+    #wish-container div{
+        margin: 10px;
+    }
+
+    #footer{
+        font-size: 1rem;
+        font: weight 200px;;
+    }
+
+}
+
+/*Phone media query*/
+@media only screen and (max-width: 480px) {
+    #intro{
+        font-size: 1rem;
+        color:green;
+    }
+    
+
+    #wish-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #wish-container div{
+        margin: 10px;
+    }
+
+    #footer{
+        font-size: 1rem;
+        font: weight 200px;;
+    }
+}
+
+/*Scroll animation stuff*/
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(0.5);
+    transition: all 1s;
+}
+@media(prefers-reduced-motion){
+    .hidden {
+        transition: none;
+    }
+}
+.show{
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+}
